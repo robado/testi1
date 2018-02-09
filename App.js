@@ -1,21 +1,23 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { Dimensions, StyleSheet, Text , FlatList, View, Button } from 'react-native';
+import AppHeader from './src/components/appHeader';
+import AppBody from './src/components/appBody';
+import AppFooter from './src/components/appFooter';
+import {AppMap} from './src/components/appMap';
+import AppJson from "./src/components/appJson"
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-          <Text>Hello world!</Text>
-      </View>
-    );
-  }
+
+export default class testi1 extends Component{
+    render() {
+        return (
+            <View>
+                <AppHeader/>
+                <AppMap/>
+                <AppBody/>
+                <AppJson/>
+                <AppFooter/>
+            </View>
+        )
+    }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'red',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+AppRegistry.registerComponent('testi1',()=> 'testi1');
